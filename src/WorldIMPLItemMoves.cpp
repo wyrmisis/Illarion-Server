@@ -1311,14 +1311,18 @@ auto World::pickUpItemFromMap(Player *cp, const position &itemPosition) -> bool 
                     freeSlot = cp->backPackContents->getFirstFreeSlot();
                 }
 
-                if (g_item.isContainer() && backpackPresent && freeSlot < cp->backPackContents->getSlotCount()) {
-                    if (g_cont == nullptr) {
-                        g_cont = new Container(g_item.getId());
-                    } else {
-                        closeShowcaseForOthers(cp, g_cont);
-                    }
+                if (g_item.isContainer() && backpackPresent) {
+                    if (freeSlot < cp->backPackContents->getSlotCount()) {
+                        if (g_cont == nullptr) {
+                            g_cont = new Container(g_item.getId());
+                        } else {
+                            closeShowcaseForOthers(cp, g_cont);
+                        }
 
-                    cp->backPackContents->InsertContainer(g_item, g_cont, freeSlot);
+                        cp->backPackContents->InsertContainer(g_item, g_cont, freeSlot);
+                    } else {
+                        NOK = true;
+                    }
                 } else {
                     if (cp->createItem(g_item.getId(), g_item.getNumber(), g_item.getQuality(), &data_map) > 0) {
                         NOK = true;
