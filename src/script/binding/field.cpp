@@ -37,7 +37,8 @@ auto field() -> Binding<Field> {
             .def("isPassable", &Field::isWalkable)
             .def("isWarp", &field_isWarp, luabind::pure_out_value(_2))
             .def("setWarp", &Field::setWarp)
-            .def("removeWarp", &Field::removeWarp);
+            .def("removeWarp", &Field::removeWarp)
+            .def("getContainer", &Field::GetContainer);
 }
 
 } // namespace binding

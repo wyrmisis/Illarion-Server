@@ -275,6 +275,14 @@ auto Field::addContainerOnStack(Item item, Container *container) -> bool {
     return false;
 }
 
+auto Field::GetContainer(MAXCOUNTTYPE count) const -> Container * {
+    auto it = containers.find(count);
+    if (it == containers.end()) {
+        return nullptr;
+    }
+    return it->second;
+}
+
 void Field::save(std::ofstream &mapStream, std::ofstream &itemStream, std::ofstream &warpStream,
                  std::ofstream &containerStream) const {
     writeToStream(mapStream, tile);

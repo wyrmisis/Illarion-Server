@@ -48,7 +48,8 @@ auto item() -> Binding<Item> {
             .def("setData", (void (Item::*)(const std::string &, const std::string &)) & Item::setData)
             .def("setData", (void (Item::*)(const std::string &, int32_t)) & Item::setData)
             .def("getData", &Item::getData)
-            .def("isLarge", &Item::isLarge);
+            .def("isLarge", &Item::isLarge)
+            .def("isContainer", &Item::isContainer);
 }
 
 } // namespace binding

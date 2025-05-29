@@ -82,6 +82,7 @@ public:
 
     auto addContainerOnStackIfWalkable(Item item, Container *container) -> bool;
     auto addContainerOnStack(Item item, Container *container) -> bool;
+    [[nodiscard]] auto GetContainer(MAXCOUNTTYPE count) const -> Container *;
 
     void age();
 
