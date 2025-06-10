@@ -1522,6 +1522,8 @@ ScreenSizeCommandTS::ScreenSizeCommandTS() : BasicClientCommand(C_SCREENSIZE_TS)
 void ScreenSizeCommandTS::decodeData() {
     width = getUnsignedCharFromBuffer();
     height = getUnsignedCharFromBuffer();
+    width = width > MAX_SCREEN_SIZE ? MAX_SCREEN_SIZE : width;
+    height = height > MAX_SCREEN_SIZE ? MAX_SCREEN_SIZE : height;
 }
 
 void ScreenSizeCommandTS::performAction(Player *player) {

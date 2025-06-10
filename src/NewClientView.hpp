@@ -40,7 +40,7 @@ public:
      */
     enum stripedirection { dir_right, dir_down };
 
-    static constexpr Coordinate mapStripeLength = 100;
+    static constexpr Coordinate mapStripeLength = 120;
     /**
      * defines one mapstripe
      */

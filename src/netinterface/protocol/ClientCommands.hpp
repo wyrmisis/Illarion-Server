@@ -560,6 +560,7 @@ public:
 
 class ScreenSizeCommandTS : public BasicClientCommand {
 private:
+    static constexpr uint8_t MAX_SCREEN_SIZE = 48;
     uint8_t width = 0;
     uint8_t height = 0;
 
