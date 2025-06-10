@@ -212,6 +212,8 @@ auto world_createFromId(World *world, TYPE_OF_ITEM_ID id, unsigned short int cou
 
 void log_lua(const std::string &message) { Logger::info(LogFacility::Script) << message << Log::end; }
 
+void log_player(const std::string &message) { Logger::info(LogFacility::Player) << message << Log::end; }
+
 auto character_getItemList(Character *character, TYPE_OF_ITEM_ID id) -> luabind::object {
     auto items = character->getItemList(id);
     lua_State *_luaState = LuaScript::getLuaState();

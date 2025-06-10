@@ -369,7 +369,7 @@ void LuaScript::init_base_functions() {
 
                        luabind::def("dofile", &dofile, luabind::raw(_1)), luabind::def("getCharForId", getCharForId),
                        luabind::def("isValidChar", &isValid), luabind::def("debug", &LuaScript::writeDebugMsg),
-                       luabind::def("log", log_lua)];
+                       luabind::def("log", log_lua), luabind::def("logPlayer", log_player)];
 
     const luabind::object &globals = luabind::globals(_luaState);
     globals["world"] = World::get();
