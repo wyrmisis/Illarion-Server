@@ -606,6 +606,12 @@ void UseTS::performAction(Player *player) {
         Logger::debug(LogFacility::Script) << "UID_KOORD" << Log::end;
         Logger::debug(LogFacility::Script) << usePosition << Log::end;
 
+        if (player->getPosition().z != usePosition.z || !player->isInRangeToField(usePosition, 1)) {
+            Logger::info(LogFacility::Player) << *player << " tried to use an item too far away: " << usePosition << Log::end;
+            paramOK = false;
+            break;
+        }
+
         try {
             map::Field &field = World::get()->fieldAt(usePosition);
 
