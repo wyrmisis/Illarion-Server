@@ -96,6 +96,15 @@ Shutdown the client:
     remember the first number on the same line as "sudo illarion /etc/illarion.conf"
     type: kill the_number
 
+Brightrim notes on the above process for Windows:
+    For step 3-4:
+    I had to manually input the https for our server repo when cloning: https://github.com/Illarion-eV/Illarion-Server
+    I had to copy the .env file from my local server into the .devcontainer to get the cloning to work.<
+
+    Due to the above, I was able to skip steps 5-9.
+
+    Connecting to the game: Remember to change the Server Address field to "localhost" and disable account login
+
      ______________________________________________________________________
 
     Last modified: May 10, 2025
