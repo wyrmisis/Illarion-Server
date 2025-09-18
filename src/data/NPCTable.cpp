@@ -78,7 +78,7 @@ void NPCTable::reload() {
 
                 Character::appearance appearance;
                 appearance.hairtype = uint8_t(row["npc_hair"].as<int16_t>());
-                appearance.beardtype = uint8_t(row["npc_hair"].as<int16_t>());
+                appearance.beardtype = uint8_t(row["npc_beard"].as<int16_t>());
                 appearance.hair = {
                         uint8_t(row["npc_hairred"].as<int16_t>()), uint8_t(row["npc_hairgreen"].as<int16_t>()),
                         uint8_t(row["npc_hairblue"].as<int16_t>()), uint8_t(row["npc_hairalpha"].as<int16_t>())};
