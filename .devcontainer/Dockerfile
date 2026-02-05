@@ -29,7 +29,8 @@ RUN \
         file ninja-build psmisc \
         default-jre-headless rsync wget \
         g++ gdb \
-        libboost-graph-dev libboost-system-dev libpq-dev lua5.2-dev librange-v3-dev && \
+        libboost-graph-dev libboost-system-dev libpq-dev lua5.2-dev librange-v3-dev \
+        doxygen graphviz && \
     apt-get autoremove -y && \
     apt-get clean -y && \
     rm -rf /var/lib/apt/lists/* && \

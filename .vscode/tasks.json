@@ -28,6 +28,24 @@
             "label": "Terminate Server",
             "type": "shell",
             "command": "killall illarion"
+        },
+        {
+            "label": "Generate Doxygen Documentation",
+            "type": "shell",
+            "command": "doxygen",
+            "args": ["Doxyfile"],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
         }
     ]
 }
