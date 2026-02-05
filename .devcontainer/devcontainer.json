@@ -61,6 +61,28 @@
 		},
 		"debug.showInStatusBar": "always",
 		"terminal.integrated.shell.linux": "/bin/bash",
+		"doxdocgen.c.commentPrefix": " * ",
+		"doxdocgen.c.firstLine": "/**",
+		"doxdocgen.c.lastLine": " */",
+		"doxdocgen.c.triggerSequence": "/**",
+		"doxdocgen.generic.authorEmail": "",
+		"doxdocgen.generic.authorName": "",
+		"doxdocgen.generic.authorTag": "@author {author}",
+		"doxdocgen.generic.briefTemplate": "@brief {text}",
+		"doxdocgen.generic.paramTemplate": "@param {param} ",
+		"doxdocgen.generic.returnTemplate": "@return ",
+		"doxdocgen.file.fileOrder": [
+			"brief",
+			"empty"
+		],
+		"doxdocgen.file.fileTemplate": "@file {name}",
+		"doxdocgen.generic.order": [
+			"brief",
+			"empty",
+			"tparam",
+			"param",
+			"return"
+		],
 		"sqltools.connections": [
 			{
 				"previewLimit": 50,
@@ -77,6 +99,7 @@
 
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
+		"cschlosser.doxdocgen",
 		"eamodio.gitlens",
 		"fredericbonnet.cmake-test-adapter",
 		"jbenden.c-cpp-flylint",
